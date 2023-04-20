@@ -53,8 +53,6 @@
         { length: (stop - start) / step + 1 },
         (value, index) => start + index * step
       );
-
-      // console.log(arrayRange(1, 95, 10)); // [1,2,3,4,5]
       return arrayRange(0,100,5);
   })
 
@@ -63,7 +61,7 @@
 <style lang="scss" scoped>
 .container {
   @apply mx-auto;
-  max-width: 740px;
+  max-width: 640px;
 
   h1 {
     @apply pb-0;
