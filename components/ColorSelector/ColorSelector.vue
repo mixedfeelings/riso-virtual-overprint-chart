@@ -3,7 +3,7 @@
         <label class="label pb-1 text-xs font-semibold" :for="props.name" :aria-label="props.name">{{props.name}}</label>     
         <select
             class="form-select bg-clip-padding bg-no-repeat appearance-none bg-gray-100 border py-1 px-2 text-sm"
-            @change="updateValue($event.target.value)"
+            @change="updateValue(selected)"
             v-model="selected"
             :required="required"
         >
@@ -150,7 +150,7 @@
     
     const emit = defineEmits(['update:modelValue'])
     
-    function updateValue(value:object) {
+    function updateValue(value:any) {
         emit('update:modelValue', value)
     }
 </script>
