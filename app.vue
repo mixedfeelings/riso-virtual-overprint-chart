@@ -10,21 +10,21 @@
       <div class="color-box">
         <div class="color color-1">
           <ul class="patches" v-for="index in 21" :key="index">
-              <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_one.id}/${patch}`">
+              <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_one}/${patch}`">
                 <div class="block" style="padding-top: 100%;"></div>
               </li>
           </ul>
         </div>  
         <div class="color color-2">
           <ul class="patches" v-for="index in 21" :key="index">
-              <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_two.id}/${patch}`">
+              <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_two}/${patch}`">
                 <div class="block" style="padding-top: 100%;"></div>
               </li>
           </ul>
         </div>
-        <div class="color color-3">
+        <div v-if="color_three != 'Select'" class="color color-3">
           <ul class="patches" v-for="index in 21" :key="index">
-              <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_three.id}/${patch}`">
+              <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_three}/${patch}`">
                 <div class="block" style="padding-top: 100%;"></div>
               </li>
           </ul>
@@ -37,14 +37,8 @@
 
 <script setup lang="ts">
   import { ref } from 'vue';
-  const color_one = ref({
-    id: 'blue',
-    name: "Blue"
-  });
-  const color_two = ref({
-    id: 'burgundy',
-    name: "Burgundy"
-  });
+  const color_one = ref('blue');
+  const color_two = ref('burgundy');
   const color_three = ref("Select");
 
   const patches_array = computed(() => {

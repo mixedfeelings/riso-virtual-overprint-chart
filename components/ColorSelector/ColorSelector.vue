@@ -3,7 +3,7 @@
         <label class="label pb-1 text-xs font-semibold" :for="props.name" :aria-label="props.name">{{props.name}}</label>     
         <select
             class="form-select bg-clip-padding bg-no-repeat appearance-none bg-gray-100 border py-1 px-2 text-sm"
-            @change="updateValue(selected)"
+            @change="updateValue($event.target.value)"
             v-model="selected"
             :required="required"
         >
@@ -12,7 +12,7 @@
                 v-for="option in options"
                 :key="option.id"
                 :index="option.id"
-                :value="option"
+                :value="option.id"
                 :selected="selected"
             >
                 {{ option.name }}
@@ -23,7 +23,7 @@
 <script setup lang="ts">
     import { ref, toRefs } from 'vue';
     const props = defineProps<{
-        modelValue: any;
+        modelValue: string;
         name?: string;
         required?: boolean;
     }>();
@@ -150,7 +150,7 @@
     
     const emit = defineEmits(['update:modelValue'])
     
-    function updateValue(value:any) {
+    function updateValue(value) {
         emit('update:modelValue', value)
     }
 </script>
