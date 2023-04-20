@@ -9,9 +9,8 @@ module.exports = {
     "./app.vue"
   ], 
   safelist: [
-      {
-          pattern: /bg/
-      }
+    {pattern: /bg/},
+    {pattern: /text/}
   ], 
   theme: {
     extend: {

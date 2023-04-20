@@ -9,6 +9,12 @@
       </div>
       <div class="color-box">
         <div class="color color-1">
+          <ul class="patches labels">
+            <li class="patch" v-for="patch in patches_array" :key="patch" :class="`text-${color_one}`" >
+              <div class="block" style="padding-top: 100%;"></div>
+              <div class="text">{{ patch }} </div>              
+              </li> 
+          </ul>
           <ul class="patches" v-for="index in 21" :key="index">
               <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_one}/${patch}`">
                 <div class="block" style="padding-top: 100%;"></div>
@@ -16,6 +22,12 @@
           </ul>
         </div>  
         <div class="color color-2">
+          <ul class="patches labels">
+            <li class="patch" v-for="patch in patches_array" :key="patch" :class="`text-${color_two}`" >
+              <div class="block" style="padding-top: 100%;"></div>
+              <div class="text">{{ patch }} </div>            
+            </li> 
+          </ul>
           <ul class="patches" v-for="index in 21" :key="index">
               <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_two}/${patch}`">
                 <div class="block" style="padding-top: 100%;"></div>
@@ -27,6 +39,12 @@
               <li class="patch" v-for="patch in patches_array" :key="patch" :class="`bg-${color_three}/${patch}`">
                 <div class="block" style="padding-top: 100%;"></div>
               </li>
+          </ul>
+          <ul class="patches labels">
+            <li class="patch" v-for="patch in patches_array" :key="patch" :class="`text-${color_three}`" >
+              <div class="block" style="padding-top: 100%;"></div>
+              <div class="text">{{ patch }} </div>            
+            </li> 
           </ul>
         </div>
       </div>
@@ -65,21 +83,23 @@
   @apply relative w-full h-full;
 
   .color-1 { 
-    @apply absolute flex flex-col w-full ;
+    @apply absolute flex flex-col w-full justify-end ;
+    margin-left: calc((100%/22));
 
     .patches {
       @apply flex flex-row ;
       .patch {
         @apply mix-blend-multiply border-2 border-white ;
-        width: calc((100%/21));
+        width: calc((100%/22));
       }
     }
   }
   .color-2 {
     @apply  absolute flex flex-row  w-full;
+    margin-top: calc((100%/22));
     .patches {
       @apply flex flex-col h-full  ;
-      width: calc((100%/21));      
+      width: calc((100%/22));      
       .patch {
         @apply block mix-blend-multiply border-2 border-white;
       };
@@ -87,12 +107,22 @@
   }
   .color-3 { 
     @apply absolute flex flex-col w-full ;
+    margin-top: calc((100%/22));
 
     .patches {
       @apply flex flex-row-reverse ;
       .patch {
         @apply mix-blend-multiply border-2 border-white;
-        width: calc((100%/21));      
+        width: calc((100%/22));      
+      }
+    }
+  }
+  .labels {
+    .patch {
+      @apply relative font-bold h-full text-center overflow-hidden  ;
+      font-size: .625rem;
+      .text {
+        @apply absolute top-0 w-full h-full flex items-center justify-center;
       }
     }
   }
