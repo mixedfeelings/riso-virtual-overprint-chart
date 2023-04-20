@@ -4,8 +4,9 @@
         <select
             class="form-select bg-clip-padding bg-no-repeat appearance-none bg-gray-100 border py-1 px-2 text-sm"
             @change="updateValue($event.target.value)"
-            v-model="selected"
+            v-model="modelValue"
             :required="required"
+            :id="props.name ? props.name : 'Select'"
         >
             <option>Select</option>
             <option
