@@ -71,6 +71,11 @@ module.exports = {
         'twenty-fives': 'calc((100%/6))'
        }
     },
+    fontFamily: {
+      serif: ["Inknut Antiqua", "serif"],
+      sans: ["Roboto Mono", "sans-serif"],
+      mono: ["Roboto Mono", "sans-serif"],
+    },
   },
   plugins: [],
 }

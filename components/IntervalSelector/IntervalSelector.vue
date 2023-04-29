@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="label pb-1 text-xs font-semibold" >Interval</div> 
+        <h4>Interval</h4> 
         <div class="chip-container">
             <label 
                 v-for="option in options" 
@@ -22,11 +22,10 @@
     import { ref, toRefs } from 'vue';
     const props = defineProps<{
         modelValue: number;
-        name?: string;
         required?: boolean;
     }>();
     
-    const { modelValue, name } = toRefs(props);
+    const { modelValue } = toRefs(props);
     const picked = ref(0);
 
     const options = [
@@ -57,19 +56,3 @@
     });
     
 </script>
-
-<style scoped lang="scss">
-.chip-container {
-    @apply flex gap-2;
-    .chip {
-        @apply bg-gray-100 border border-gray-200 px-4 py-1 rounded-lg text-sm text-sm cursor-pointer;
-        input {
-            @apply hidden;
-        }
-    }
-    .chip.selected {
-        @apply bg-gray-300 cursor-default;
-    }
-}
-
-</style>

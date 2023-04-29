@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto+Mono:wght@400;600;700&display=swap');
+
+body {
+  @apply font-mono;
+}
+h1,h2,h3,h4 {
+    @apply tracking-wider;
+}
+h1,h2 {
+   @apply font-serif font-bold pb-2;
+}
+
+h1 {
+    @apply text-xl;
+}
+
+h2 {
+    @apply text-lg;
+}
+
+h3 {
+    @apply pb-1 text-base font-semibold;
+}
+
+label,
+h4 {
+    @apply pb-1 text-sm font-semibold;
+}

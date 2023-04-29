@@ -39,3 +39,12 @@
         --color-natural: rgb(251, 247, 239);
     }
 }
+
+.container {
+    @apply mx-auto;
+    max-width: 640px;
+}
+
+@import "typography";
+@import "form-elements";
+@import "standard-chart";
