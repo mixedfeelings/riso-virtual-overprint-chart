@@ -43,10 +43,10 @@
             id: 'chemical',
             name: 'Chemical Color Plate Corp.',
         },
-        {
-            id: 'dramatic',
-            name: 'Dramatic Color by Overprinting',
-        }, 
+        // {
+        //     id: 'dramatic',
+        //     name: 'Dramatic Color by Overprinting',
+        // }, 
     ]
     
     const emit = defineEmits(['update:modelValue'])

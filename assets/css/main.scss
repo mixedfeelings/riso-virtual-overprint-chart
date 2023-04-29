@@ -40,6 +40,10 @@
     }
 }
 
+html {
+    @apply pb-8;
+}
+
 .container {
     @apply mx-auto;
     max-width: 640px;
@@ -47,4 +51,4 @@
 
 @import "typography";
 @import "form-elements";
-@import "standard-chart";
+@import "charts";

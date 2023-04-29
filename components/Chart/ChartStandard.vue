@@ -1,5 +1,6 @@
 <template>
-      <div class="chart-standard color-box" :class="chart_class">
+    <div class="chart-standard">
+      <div class="color-box h-full" :class="chart_class">
         <div class="color color-1">
           <ul class="patches labels">
             <li class="patch" v-for="patch in patches_array" :key="patch" :class="`text-${color_one}`" >
@@ -40,6 +41,8 @@
           </ul>
         </div>
       </div>
+    </div>
+
 </template>
 <script setup lang="ts">
     import { toRefs } from 'vue';

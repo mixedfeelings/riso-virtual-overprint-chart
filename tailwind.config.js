@@ -68,7 +68,8 @@ module.exports = {
        spacing: {
         'fives': 'calc((100%/22))',
         'tens': 'calc((100%/12))',
-        'twenty-fives': 'calc((100%/6))'
+        'twenty-fives': 'calc((100%/6))',
+        'chemical': 'calc((100%/5))'
        }
     },
     fontFamily: {
