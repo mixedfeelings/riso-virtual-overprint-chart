@@ -66,7 +66,9 @@ module.exports = {
         '95': '.95',
        },
        spacing: {
-        '1/21': '4%'
+        'fives': 'calc((100%/22))',
+        'tens': 'calc((100%/12))',
+        'twenty-fives': 'calc((100%/6))'
        }
     },
   },
