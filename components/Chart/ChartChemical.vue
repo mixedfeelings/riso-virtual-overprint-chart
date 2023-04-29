@@ -159,6 +159,16 @@
                     </li>
                 </ul>
             </div>
+            <div :class="`color-3 ${color_three}`">
+                <div class="patch">
+                    <div class="patch-inner bg-transparent"></div> 
+                </div>
+                <div :class="`labels text-${color_three}`">
+                    <div class="patch">
+                        <div class="text">0</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="color-box color-3-25">
             <div :class="`color-1 ${color_one}`">
