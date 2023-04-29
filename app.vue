@@ -24,7 +24,7 @@
 <script setup lang="ts">
   import { ref,reactive } from 'vue';
   
-  const chart_type = ref("chemical");
+  const chart_type = ref("standard");
   const interval = ref(10);
 
   const color_one = ref('blue');
